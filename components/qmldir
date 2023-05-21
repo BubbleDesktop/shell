@@ -1,0 +1,4 @@
+module io.github.bubbledesktop.private.bubbleshell
+plugin bubbleshellprivateplugin
+
+singleton StartupFeedback 2.0 qml/StartupFeedback.qml

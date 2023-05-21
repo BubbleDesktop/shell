@@ -1,0 +1,9 @@
+[Desktop]
+ToolBox=io.github.bubbledesktop.bubbleshell.desktoptoolbox
+
+[Panel]
+ToolBox=null
+
+[Desktop][ContainmentActions]
+
+
