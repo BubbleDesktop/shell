@@ -6,5 +6,5 @@ QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland --xwayland "plasmashell -p
 ```
 
 
----
+
 ###### Part of the BubbleDesktop project, the desktop that pops.
