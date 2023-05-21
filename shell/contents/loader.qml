@@ -1,8 +1,7 @@
-/*   vim:set foldmethod=marker:
+/*   
+ *   SPDX-FileCopyrightText: 2023 meisme-dev <meisme.mail@protonmail.com>
  *
- *   SPDX-FileCopyrightText: 2013 Ivan Cukic <ivan.cukic(at)kde.org>
- *
- *   SPDX-License-Identifier: GPL-2.0-or-later
+ *   SPDX-License-Identifier: AGPL-3.0-only
  */
 
 import QtQuick 2
@@ -10,7 +9,7 @@ import QtQuick 2
 Item {
     id: main
 
-    property string shell  : "org.kde.plasma.mini"
+    property string shell  : "io.github.bubbledesktop.bubbleshell"
     property bool willing  : true
     property string currentSession
     property int priority : 0 //currentSession == "/usr/share/xsessions/plasma-minishell" ? 0 : 10

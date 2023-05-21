@@ -1,7 +1,7 @@
 /*
- *   SPDX-FileCopyrightText: 2011 Marco Martin <mart@kde.org>
+ *   SPDX-FileCopyrightText: 2023 meisme-dev <meisme.mail@protonmail.com>
  *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
+ *   SPDX-License-Identifier: AGPL-3.0-only
  */
 
 import QtQuick 2.2

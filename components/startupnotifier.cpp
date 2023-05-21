@@ -1,7 +1,7 @@
 /*
- *   SPDX-FileCopyrightText: 2021 Aleix Pol Gonzalez <aleixpol@kde.org>
+ *   SPDX-FileCopyrightText: 2023 meisme-dev <meisme.mail@protonmail.com>
  *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
+ *   SPDX-License-Identifier: AGPL-3.0-only
  */
 
 #include "startupnotifier.h"

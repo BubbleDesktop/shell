@@ -10,14 +10,14 @@ for (var j = 0; j < desktopsArray.length; j++) {
 }
 
 var panel = new Panel
-panel.location = "top";
-panel.height = 2 * gridUnit;
+panel.location = "bottom";
+panel.height = 2.5 * gridUnit;
 
+panel.addWidget("org.kde.plasma.kickoff");
 var battery = panel.addWidget("org.kde.plasma.battery");
 battery.currentConfigGroup = ["Configuration", "General"]
 battery.writeConfig("showPercentage", true)
 battery.reloadConfig()
 
 panel.addWidget("org.kde.plasma.networkmanagement");
-panel.addWidget("org.kde.plasma.kickoff");
 //panel.hiding = "windowsbelow";

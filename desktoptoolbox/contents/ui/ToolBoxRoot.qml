@@ -1,9 +1,7 @@
 /*
- *   SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
- *   SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
- *   SPDX-FileCopyrightText: 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   SPDX-FileCopyrightText: 2023 meisme-dev <meisme.mail@protonmail.com>
  *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
+ *   SPDX-License-Identifier: AGPL-3.0-only
  */
 
 import QtQuick 2.2
@@ -16,7 +14,7 @@ import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: main
-    objectName: "org.kde.desktoptoolbox"
+    objectName: "io.github.bubbledesktop.desktoptoolbox"
 
     z: 999
     anchors.fill: parent

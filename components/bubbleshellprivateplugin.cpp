@@ -1,7 +1,7 @@
 /*
-    SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2023 meisme-dev <meisme.mail@protonmail.com>
 
-    SPDX-License-Identifier: MIT
+    SPDX-License-Identifier: AGPL-3.0-only
 */
 
 #include "bubbleshellprivateplugin.h"

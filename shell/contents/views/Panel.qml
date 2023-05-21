@@ -1,7 +1,7 @@
 /*
- *  SPDX-FileCopyrightText: 2012 Marco Martin <mart@kde.org>
+ *  SPDX-FileCopyrightText: 2023 me is me <meisme.mail@protonmail.com>
  *
- *  SPDX-License-Identifier: GPL-2.0-or-later
+ *  SPDX-License-Identifier: AGPL-3.0-only
  */
 
 import QtQuick 2.0
@@ -9,22 +9,46 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Rectangle {
+Item {
     id: root
 
-    visible: false //adjust borders is run during setup. We want to avoid painting till completed
     property Item containment
 
-    color: containment.backgroundHints == PlasmaCore.Types.NoBackground ? "transparent" : "PlasmaCore.Theme.backgroundColor"
+    property int maskOffsetY: 8
+    property int maskOffsetX: 8
 
-    onContainmentChanged: {
-        containment.parent = root;
-        containment.visible = true;
-        containment.anchors.fill = root;
-        panel.backgroundHints = containment.backgroundHints;
+    PlasmaCore.FrameSvgItem {
+        id: bg
+        visible: true
+        anchors {
+            fill: parent
+            bottomMargin: 8
+            leftMargin: 8
+            rightMargin: 8
+            topMargin: 8
+        }
+        imagePath: "widgets/panel-background"
     }
 
-    Component.onCompleted: {
-        visible = true
+    property bool hasShadows: false
+    property var panelMask: bg.mask
+
+    readonly property int minPanelHeight: 64
+    readonly property int minPanelWidth: bg.minimumDrawingWidth
+
+    onContainmentChanged: {
+        if (!containment) {
+            return;
+        }
+        containment.parent = containmentParent;
+        containment.visible = true;
+        containment.anchors.fill = containmentParent;
+    }
+
+    Item {
+        id: containmentParent
+        anchors.centerIn: bg
+        width: root.width - 16
+        height: root.height - 16
     }
 }
