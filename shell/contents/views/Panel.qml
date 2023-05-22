@@ -10,9 +10,9 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Item {
+Rectangle {
     id: root
-
+    color: "transparent"
     property Item containment
 
     property int maskOffsetY: 8
@@ -20,7 +20,7 @@ Item {
 
     PlasmaCore.FrameSvgItem {
         id: bg
-        visible: true
+        visible: false
         anchors {
             fill: parent
             bottomMargin: 8
@@ -28,13 +28,15 @@ Item {
             rightMargin: 8
             topMargin: 8
         }
-        imagePath: "widgets/panel-background"
+        imagePath: ""
     }
+
+
 
     property bool hasShadows: false
     property var panelMask: bg.mask
 
-    readonly property int minPanelHeight: 64
+    readonly property int minPanelHeight: bg.minimumDrawingHeight
     readonly property int minPanelWidth: bg.minimumDrawingWidth
 
     onContainmentChanged: {
